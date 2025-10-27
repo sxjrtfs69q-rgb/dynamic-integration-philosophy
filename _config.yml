@@ -1,0 +1,18 @@
+title: "積算の哲学 – The Philosophy of Dynamic Integration"
+description: "思想を“動作”として設計し、時間に積算していくための構造体"
+lang: "ja"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+permalink: /posts/:title/
+collections:
+  modules:
+    output: true
+defaults:
+  - scope: {path: ""}
+    values:
+      layout: page
+      toc: true
+      author: "shun watanabe"
