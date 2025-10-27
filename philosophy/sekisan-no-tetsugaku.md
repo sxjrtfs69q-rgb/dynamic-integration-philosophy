@@ -10,7 +10,7 @@ permalink: /philosophy/sekisan-no-tetsugaku/
 このページは、思想体系の原典『積算の哲学』への参照リンクを提供します。
 
 📘 **Kindle版はこちら：**  
-👉 [Amazon Kindleストアで読む](https://www.amazon.co.jp/dp/XXXXXXXXXX)  
+👉 [Amazon Kindleストアで読む](https://www.amazon.co.jp/dp/B0FV1T8QCG)
 （※ XXXXXXXXXX をあなたのASINに差し替えてください）
 
 ---
@@ -20,5 +20,4 @@ permalink: /philosophy/sekisan-no-tetsugaku/
 - [OODA体得モジュール](/modules/ooda/)
 - [自己再生モジュール](/modules/regeneration/)
 - [社会復帰モジュール](/modules/society/)
-- [冥府編](/modules/underworld/)
 - [回顧録モジュール](/modules/memoir/)
