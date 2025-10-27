@@ -11,7 +11,6 @@ permalink: /philosophy/sekisan-no-tetsugaku/
 
 📘 **Kindle版はこちら：**  
 👉 [Amazon Kindleストアで読む](https://www.amazon.co.jp/dp/B0FV1T8QCG)
-（※ XXXXXXXXXX をあなたのASINに差し替えてください）
 
 ---
 
