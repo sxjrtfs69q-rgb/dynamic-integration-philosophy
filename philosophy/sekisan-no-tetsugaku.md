@@ -1,6 +1,6 @@
 ---
 title: "積算の哲学（Kindle版）"
-summary: "思想体系の原典。時間に対する誠意としての“積算”を定義した作品。"
+summary: "思想体系の原典。すべての事象は積算の有無によって発生しており、責任駆動欲求を定義した作品。"
 tags: ["積算","誠意","原典","Kindle"]
 permalink: /philosophy/sekisan-no-tetsugaku/
 ---
