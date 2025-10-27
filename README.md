@@ -6,6 +6,6 @@
 
 ## ディレクトリ
 - `index.md`: サイトの入口（「はじめに」＋思想地図）
-- `philosophy/sekisan-no-tetsugaku.md`: Kindleリンク
+- `[philosophy/sekisan-no-tetsugaku.md](https://www.amazon.co.jp/dp/B0FV1T8QCG)`: Kindleリンク
 - `modules/*/index.md`: 各モジュール本文（公開）
 - `glossary/*`: 用語集
