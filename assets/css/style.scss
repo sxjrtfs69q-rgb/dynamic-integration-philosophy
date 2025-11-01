@@ -1,0 +1,16 @@
+---
+---
+
+@import "minima";
+
+/* --- カスタムCSSここから --- */
+
+/* 上部のナビゲーションメニューを非表示にする */
+.site-nav {
+  display: none;
+}
+
+/* ページタイトルの余白を少し詰める（任意） */
+.site-header {
+  margin-bottom: 1.5rem;
+}
