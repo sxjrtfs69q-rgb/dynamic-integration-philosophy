@@ -2,19 +2,29 @@ title: "積算の哲学 – The Philosophy of Dynamic Integration"
 description: "日本の戦後失った読解力を取り戻し、OODAを実践するためのOS"
 lang: "ja"
 theme: minima
+
+# ★ 追加：SEO/サイトマップ/OGP用
+url: "https://sxjrtfs69q-rgb.github.io"
+baseurl: "/dynamic-integration-philosophy"
+timezone: "Asia/Tokyo"
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-permalink: /posts/:title/
+
+permalink: pretty
+
 collections:
   modules:
     output: true
+
 defaults:
-  - scope: {path: ""}
+  - scope: { path: "" }
     values:
       layout: page
       toc: true
       author: "shun watanabe"
 
+# ヘッダーメニューは非表示のまま
 header_pages: []
