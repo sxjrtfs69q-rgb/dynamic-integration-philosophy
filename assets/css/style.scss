@@ -5,12 +5,30 @@
 
 /* --- カスタムCSSここから --- */
 
-/* 上部のナビゲーションメニューを非表示にする */
+/* 上部のナビゲーションメニュー全体の調整 */
 .site-nav {
-  display: none;
+  display: block; /* 非表示にしたい場合はnone、表示したい場合はblock */
+  text-align: left; /* 左寄せ */
+  margin: 1rem 0;
 }
 
-/* ページタイトルの余白を少し詰める（任意） */
-.site-header {
-  margin-bottom: 1.5rem;
+/* 各リンクを縦並びに */
+.site-nav .page-link {
+  display: block;          /* ブロック要素化 → 縦並び */
+  margin: 0.3rem 0;        /* 上下に余白 */
+  font-size: 0.9rem;       /* 少し小さく整える（任意） */
+  text-decoration: none;   /* 下線削除 */
+  color: #222;             /* 文字色 */
+}
+
+/* hover効果（マウスを重ねたとき） */
+.site-nav .page-link:hover {
+  color: #0056b3;          /* 濃い青に */
+  text-decoration: underline;
+}
+
+/* もし背景を少し区切りたいなら */
+.site-nav {
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
 }
