@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sxjrtfs69q-rgb.github.io/dynamic-integration-philosophy/sitemap.xml
