@@ -37,3 +37,8 @@ header_pages:
   - modules/inferno/index.md
   - README.md
 
+author: "Shun Watanabe"
+email: ""        # 公開しないなら空でOK
+logo: "/assets/images/ogp.png"   # まだ無ければ後でOK
+twitter_username: ""             # あれば入れる
+github_username: "sxjrtfs69q-rgb"
