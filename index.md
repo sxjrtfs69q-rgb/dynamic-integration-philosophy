@@ -5,7 +5,7 @@ tags: ["文章読解力","読解力","OODA","積算の哲学","社会復帰"]
 ---
 
 <div align="center">
-  <img src="/assets/images/samurai.png" alt="悲しみを背負った武士" width="70%">
+  <img src="{{ site.baseurl }}/assets/images/samurai.png" alt="悲しみを背負った武士" width="70%">
   <p><em>悲しみを背負った武士 ― 『積算の哲学』象徴図</em></p>
 </div>
 
