@@ -1,0 +1,50 @@
+{%- assign canonical = site.url | append: site.baseurl | append: page.url -%}
+{%- assign sitename = site.title | default: "Site" -%}
+{%- assign pagetitle = page.title | default: sitename -%}
+{%- assign pagedesc = page.description | default: site.description -%}
+{%- assign lang = site.lang | default: "ja" -%}
+{%- assign author = site.author | default: "Shun Watanabe" -%}
+{%- assign license_url = "https://creativecommons.org/licenses/by-nc-nd/4.0/" -%}
+
+<!-- シリーズ（サイト全体）の構造化データ：トップ（index）で出力 -->
+{%- if page.url == "/" or page.url == site.baseurl or page.is_home -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWorkSeries",
+  "name": "{{ sitename | escape }}",
+  "inLanguage": "{{ lang }}",
+  "description": "{{ site.description | strip_newlines | escape }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "image": ["{{ site.url }}{{ site.baseurl }}{{ site.logo | default: '/assets/images/ogp.png' }}"],
+  "author": {
+    "@type": "Person",
+    "name": "{{ author | escape }}"
+  }
+}
+</script>
+{%- endif -%}
+
+<!-- 各ページ（記事/モジュール）を思想作品として宣言 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ pagetitle | escape }}",
+  "inLanguage": "{{ lang }}",
+  "description": "{{ pagedesc | strip_newlines | escape }}",
+  "url": "{{ canonical }}",
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "{{ sitename | escape }}",
+    "url": "{{ site.url }}{{ site.baseurl }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ author | escape }}"
+  },
+  "datePublished": "{{ page.date | default: site.time | date: '%Y-%m-%d' }}",
+  "keywords": [{% if page.tags %}{% for t in page.tags %}"{{ t | escape }}"{% if forloop.last == false %},{% endif %}{% endfor %}{% else %}"哲学","OODA","読解力","観察限界"{% endif %}],
+  "license": "{{ license_url }}"
+}
+</script>
