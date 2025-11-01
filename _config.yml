@@ -42,3 +42,14 @@ email: ""        # 公開しないなら空でOK
 logo: "/assets/images/samurai.png"   
 twitter_username: ""             # あれば入れる
 github_username: "sxjrtfs69q-rgb"
+# 末尾に追加
+structured_data:
+  "@context": "https://schema.org"
+  "@type": "CreativeWork"
+  "name": "積算の哲学 – The Philosophy of Dynamic Integration"
+  "author": "Shun Watanabe"
+  "description": "読解力・OODA・自己再生・社会復帰・冥府編を通して、人間のOSを再設計する思想体系。"
+  "inLanguage": "ja"
+  "keywords": ["哲学", "OODA", "読解力", "人間のOS", "社会構造", "AI倫理"]
+  "url": "https://sxjrtfs69q-rgb.github.io/dynamic-integration-philosophy/"
+
