@@ -27,4 +27,12 @@ defaults:
       author: "shun watanabe"
 
 # ヘッダーメニューは非表示のまま
-header_pages: []
+header_pages:
+  - index.md
+  - philosophy/sekisan-no-tetsugaku.md
+  - modules/reading/index.md
+  - modules/ooda/index.md
+  - modules/regeneration/index.md
+  - modules/society/index.md
+  - modules/inferno/index.md
+
