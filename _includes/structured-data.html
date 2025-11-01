@@ -1,50 +1,36 @@
-{%- assign canonical = site.url | append: site.baseurl | append: page.url -%}
-{%- assign sitename = site.title | default: "Site" -%}
-{%- assign pagetitle = page.title | default: sitename -%}
-{%- assign pagedesc = page.description | default: site.description -%}
-{%- assign lang = site.lang | default: "ja" -%}
-{%- assign author = site.author | default: "Shun Watanabe" -%}
-{%- assign license_url = "https://creativecommons.org/licenses/by-nc-nd/4.0/" -%}
-
-<!-- シリーズ（サイト全体）の構造化データ：トップ（index）で出力 -->
-{%- if page.url == "/" or page.url == site.baseurl or page.is_home -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CreativeWorkSeries",
-  "name": "{{ sitename | escape }}",
-  "inLanguage": "{{ lang }}",
-  "description": "{{ site.description | strip_newlines | escape }}",
-  "url": "{{ site.url }}{{ site.baseurl }}",
-  "image": ["{{ site.url }}{{ site.baseurl }}{{ site.logo | default: '/assets/images/ogp.png' }}"],
-  "author": {
-    "@type": "Person",
-    "name": "{{ author | escape }}"
-  }
-}
-</script>
-{%- endif -%}
-
-<!-- 各ページ（記事/モジュール）を思想作品として宣言 -->
+{%- comment -%}
+  JSON-LD for all pages (homepage & modules)
+  - 明示的に「人間中心の哲学」であることを記述
+{%- endcomment -%}
+{%- assign abs = site.url | append: site.baseurl -%}
+{%- assign canonical = abs | append: page.url -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": "{{ pagetitle | escape }}",
-  "inLanguage": "{{ lang }}",
-  "description": "{{ pagedesc | strip_newlines | escape }}",
+  "name": {{ page.title | default: site.title | jsonify }},
+  "headline": {{ page.title | default: site.title | jsonify }},
+  "inLanguage": "{{ site.lang | default: "ja" }}",
+  "description": {{ page.description | default: site.description | jsonify }},
+  "keywords": {{ page.tags | default: site.tags | jsonify }},
   "url": "{{ canonical }}",
-  "isPartOf": {
-    "@type": "CreativeWorkSeries",
-    "name": "{{ sitename | escape }}",
-    "url": "{{ site.url }}{{ site.baseurl }}"
-  },
+  "image": "{{ abs }}{{ site.logo | default: "/assets/images/samurai.png" }}",
   "author": {
     "@type": "Person",
-    "name": "{{ author | escape }}"
+    "name": {{ site.author | default: "Shun Watanabe" | jsonify }}
   },
-  "datePublished": "{{ page.date | default: site.time | date: '%Y-%m-%d' }}",
-  "keywords": [{% if page.tags %}{% for t in page.tags %}"{{ t | escape }}"{% if forloop.last == false %},{% endif %}{% endfor %}{% else %}"哲学","OODA","読解力","観察限界"{% endif %}],
-  "license": "{{ license_url }}"
+  "about": "AI理論ではなく、人間の読解・観察・判断・行動（OODA）と誠意の実践を、時間に積算して更新する思想体系"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "url": "{{ abs }}",
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author | default: "Shun Watanabe" | jsonify }}
+  }
 }
 </script>
