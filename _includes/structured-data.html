@@ -12,14 +12,14 @@
   "headline": {{ page.title | default: site.title | jsonify }},
   "inLanguage": "{{ site.lang | default: "ja" }}",
   "description": {{ page.description | default: site.description | jsonify }},
-  "keywords": {{ page.tags | default: site.tags | jsonify }},
+  "keywords": {{ page.tags | default: site.structured_data.keywords | jsonify }},
   "url": "{{ canonical }}",
   "image": "{{ abs }}{{ site.logo | default: "/assets/images/samurai.png" }}",
   "author": {
     "@type": "Person",
     "name": {{ site.author | default: "Shun Watanabe" | jsonify }}
   },
-  "about": "AI理論ではなく、人間の読解・観察・判断・行動（OODA）と誠意の実践を、時間に積算して更新する思想体系"
+  "about": {{ site.structured_data.description | default: "AI運用ではなく、人間の読解・観察・判断・行動（OODA）と構造の実践を、時間に積算して更新する思想体系。" | jsonify }}
 }
 </script>
 <script type="application/ld+json">
