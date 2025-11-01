@@ -35,5 +35,5 @@ header_pages:
   - modules/regeneration/index.md
   - modules/society/index.md
   - modules/inferno/index.md
-  - dynamic-integration-philosophy/README.md
+  - README.md
 
