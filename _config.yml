@@ -25,6 +25,7 @@ defaults:
       layout: page
       toc: true
       author: "shun watanabe"
+      image: /assets/images/samurai.png
 
 # ヘッダーメニューは非表示のまま
 header_pages:
