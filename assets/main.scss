@@ -3,30 +3,28 @@
 
 @import "minima";
 
-/* --------------------
-   カスタムCSSここから
--------------------- */
-
-/* ナビゲーションメニュー（リンク）を左寄せにする */
-.site-nav {
+/* ヘッダーのレイアウトを縦積みにして左寄せ */
+.site-header .wrapper {        /* タイトルとナビを上下に積む */
   display: block;
-  text-align: left;   /* ←ここを追加 */
-  margin-left: 0;     /* 左余白をゼロにする（必要に応じて） */
-  padding-left: 1rem; /* 少し内側に寄せたい場合は調整 */
 }
 
-.site-title {
+.site-title {                  /* タイトルの右寄せ/floatを解除 */
+  float: none !important;
+  margin: 0;                   /* 余白整え（任意） */
   text-align: left;
 }
-  
-/* 各リンクをブロック化して縦並びに（既にOKだけど明示的に） */
+
+.site-nav {                    /* ナビ自体を左側に寄せる */
+  float: none !important;      /* 右側配置を無効化 */
+  margin-left: 0 !important;   /* auto を打ち消す */
+  margin-top: .5rem;           /* タイトルとの間隔 */
+  padding-left: 0;             /* タイトル位置に揃える */
+  text-align: left;
+}
+
+/* 各リンクを縦並びに */
+.site-nav .page-link,
 .site-nav a {
   display: block;
-  margin: 0.25rem 0;
-  text-align: left;
-}
-
-/* ページタイトル下の余白（任意） */
-.site-header {
-  margin-bottom: 1.5rem;
+  margin: .25rem 0;
 }
