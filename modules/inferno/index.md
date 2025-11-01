@@ -1,6 +1,9 @@
 ---  
 title:  h001_冥府編 ― 制御  
+description: "この思想に至るまでの過去の記憶"
+tags: ["文章読解力","読解力","OODA","積算の哲学","社会復帰"]
 ---  
+{% include structured-data.html %}
 
 いつからだろう。  
 私から感情がなくなった。  
