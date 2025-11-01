@@ -1,0 +1,31 @@
+---
+---
+
+@import "minima";
+
+/* --- ここから上部リンクのレイアウト調整 --- */
+
+/* ナビ全体の表示（縦並びにする） */
+.site-nav {
+  display: block;        /* 非表示にしたいときは none */
+  text-align: left;
+  margin: 1rem 0;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+/* 各リンクを縦に並べ、余白を付ける */
+.site-nav .page-link {
+  display: block;        /* ブロック化で縦並び */
+  margin: 0.3rem 0;
+  text-decoration: none;
+  color: #222;
+  font-size: 0.95rem;
+}
+.site-nav .page-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* タイトル周りの余白微調整（任意） */
+.site-header { margin-bottom: 1.5rem; }
